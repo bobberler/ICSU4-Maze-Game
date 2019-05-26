@@ -9,8 +9,8 @@ Maze::Maze()
 //            cell[y][x].setSize(sf::Vector2f(WIDTH/MAZE_WIDTH, HEIGHT/MAZE_HEIGHT));
 //            cell[y][x].setPosition(sf::Vector2f(WIDTH/MAZE_WIDTH*y, HEIGHT/MAZE_HEIGHT*x));
 //            cell[y][x].setFillColor(sf::Color::Black);
-////            cell[y][x].setOutlineThickness(3);
-////            cell[y][x].setOutlineColor(sf::Color::White);
+//            cell[y][x].setOutlineThickness(3);
+//            cell[y][x].setOutlineColor(sf::Color::White);
 //        }
 //    }
     std::string path = "maze1.txt";
@@ -54,6 +54,21 @@ void Maze::drawMaze(sf::RenderWindow& window)
         }
     }
     return;
+}
+
+sf::Vector2f Maze::getCellPosition (int x, int y)
+{
+    return cell[y][x].getPosition();
+}
+
+sf::Vector2f Maze::getSize (int x, int y)
+{
+    return cell[y][x].getSize();
+}
+
+sf::Color Maze::getColor (int x, int y)
+{
+    return cell[y][x].getFillColor();
 }
 
 

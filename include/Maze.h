@@ -18,6 +18,10 @@ class Maze
         virtual ~Maze();
         void drawMaze (sf::RenderWindow&);
 
+        sf::Vector2f getCellPosition(int, int);
+        sf::Vector2f getSize (int, int);
+        sf::Color getColor (int, int);
+
     protected:
 
     private:
