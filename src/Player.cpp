@@ -46,11 +46,13 @@ void Player::checkCollision()
     return;
 }
 
-void Player::update()
+void Player::update(Maze& maze)
 {
     mazeX = (position.x+body.getRadius())*20/WIDTH;//calculates the cell in the maze its in
     mazeY = (position.y+body.getRadius())*20/HEIGHT;
     checkCollision();
+    if (autoSolver == true)
+        recursiveSolve(maze, 1, 1);
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::W) or sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
         position.y -= speed;
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::S) or sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
@@ -63,4 +65,29 @@ void Player::update()
     //std::cout << "x: " << mazeX << " y: " << mazeY << std::endl;
     //std::cout << "x: " << position.x+10 << " y: " << position.y+10 << std::endl;
     return;
+}
+
+bool Player::recursiveSolve(Maze& maze, int autoX, int autoY);
+{
+    maze.setFillColor(autoX, autoY, sf::Color Blue);
+    if (autoX == ENDX and autoY == ENDY)
+        return true;
+
+    if (maze.getColor(autoX, autoY-1) == sf::Color::White and recursiveSolve(maze, autoX, autoY-1)) //up
+    {
+        return true;
+    }
+    if (maze.getColor(autoX, autoY+1) == sf::Color::White and recursiveSolve(maze, autoX, autoY+1)) //down
+    {
+        return true;
+    }
+    if (maze.getColor(autoX-1, autoY) == sf::Color::White and recursiveSolve(maze, autoX-1, autoY)) //left
+    {
+        return true;
+    }
+    if (maze.getColor(autoX+1, autoY) == sf::Color::White and recursiveSolve(maze, autoX+1, autoY)) //right
+    {
+        return true;
+    }
+    maze.setFillColor(autoX, autoY, sf::Color White);
 }

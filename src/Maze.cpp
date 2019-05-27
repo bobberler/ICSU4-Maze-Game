@@ -71,4 +71,9 @@ sf::Color Maze::getColor (int x, int y)
     return cell[y][x].getFillColor();
 }
 
+void Maze::setColor (int x, int y, sf::Color color)
+{
+    cell[y][x].setFillColor(color);
+}
+
 

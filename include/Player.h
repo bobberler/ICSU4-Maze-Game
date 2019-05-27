@@ -11,7 +11,8 @@ class Player
         virtual ~Player();
         void display (sf::RenderWindow&);
         void checkCollision();
-        void update();
+        void update(Maze&);
+        void recursiveSolve(Maze&, int, int);
 
     protected:
 
@@ -23,7 +24,7 @@ class Player
         int mazeX;
         int mazeY;
         bool autoSolver;
-        Maze maze;
+        //Maze maze;
 };
 
 #endif // PLAYER_H
