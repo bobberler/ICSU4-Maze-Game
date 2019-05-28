@@ -438,12 +438,12 @@
 1558555099 source:d:\tom c++\sfml-test\src\game.cpp
 	"Game.h"
 
-1559007964 source:e:\c++\mazegame\summative\main.cpp
+1559007735 source:e:\c++\mazegame\summative\main.cpp
 	<SFML/Graphics.hpp>
 	"Maze.h"
 	"Player.h"
 
-1559007958 e:\c++\mazegame\summative\include\maze.h
+1559007735 e:\c++\mazegame\summative\include\maze.h
 	<SFML/Graphics.hpp>
 	<stack>
 	<iostream>
@@ -463,7 +463,7 @@
 1558813536 source:e:\c++\mazegame\summative\src\game.cpp
 	"Game.h"
 
-1559007914 source:e:\c++\mazegame\summative\src\maze.cpp
+1559007735 source:e:\c++\mazegame\summative\src\maze.cpp
 	"Maze.h"
 
 1525815618 c:\program files (x86)\codeblocks\sfml\include\sfml\graphics.hpp
@@ -875,7 +875,7 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1559007948 e:\c++\mazegame\summative\include\player.h
+1559007735 e:\c++\mazegame\summative\include\player.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Maze.h"
@@ -883,14 +883,14 @@
 1559007735 source:e:\c++\mazegame\summative\src\player.cpp
 	"Player.h"
 
-1559007735 D
-
 1559005534 source:e:\c++\mazegame\summative\src\gamestates.cpp
 	"GameStates.h"
 
 1559005534 e:\c++\mazegame\summative\include\gamestates.h
 
-1558978449 source:d:\tom c++\sfml-test\summative\main.cpp
+1559005534 D
+
+1559070171 source:d:\tom c++\sfml-test\summative\main.cpp
 	<SFML/Graphics.hpp>
 	"Maze.h"
 	"Player.h"
@@ -901,7 +901,7 @@
 	<iostream>
 	<fstream>
 
-1559070113 d:\tom c++\sfml-test\summative\include\player.h
+1559070511 d:\tom c++\sfml-test\summative\include\player.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Maze.h"
@@ -913,11 +913,11 @@
 	"Game.h"
 	<SFML/Graphics.hpp>
 
-1558634527 d:\tom c++\sfml-test\summative\include\game.h
+1559070113 d:\tom c++\sfml-test\summative\include\game.h
 	<SFML/Graphics.hpp>
 	"Maze.h"
 
-1558555099 source:d:\tom c++\sfml-test\summative\src\game.cpp
+1559070113 source:d:\tom c++\sfml-test\summative\src\game.cpp
 	"Game.h"
 
 1559070113 source:d:\tom c++\sfml-test\summative\src\maze.cpp
@@ -927,4 +927,6 @@
 	"Player.h"
 
 1558978449 a3e91415f9eba6aaeac745a9f39f1c1e225dc
+
+1558978449 ent of 87c3ebb... Merge branch 'master' of https://github.com/bobberler/Summative
 

@@ -8,7 +8,7 @@ int main()
     sf::RenderWindow window(sf::VideoMode(WIDTH, HEIGHT), "Maze Game", sf::Style::Default, settings);
     Maze maze;
     Player player(maze.getCellPosition(1,1));
-    window.setFramerateLimit(60) ;
+    window.setFramerateLimit(60);
 
     while (window.isOpen())
     {
