@@ -12,6 +12,7 @@ class Player
         void display (sf::RenderWindow&);
         void checkCollision();
         void update();
+        //bool recursiveSolve(Maze&, int, int);
 
     protected:
 
