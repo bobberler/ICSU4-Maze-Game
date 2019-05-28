@@ -14,6 +14,7 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="D:/Program Files (x86)/CodeBlocks/sfml/include" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add library="sfml-graphics" />
@@ -40,12 +41,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="include/Cell.h" />
 		<Unit filename="include/Game.h" />
 		<Unit filename="include/Maze.h" />
 		<Unit filename="include/Player.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/Cell.cpp" />
 		<Unit filename="src/Game.cpp" />
 		<Unit filename="src/Maze.cpp" />
 		<Unit filename="src/Player.cpp" />
