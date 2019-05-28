@@ -48,6 +48,7 @@ void Player::update()
 {
     mazeX = (position.x+body.getRadius())*20/WIDTH;//calculates the cell in the maze its in
     mazeY = (position.y+body.getRadius())*20/HEIGHT;
+    checkCollision();
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::W) or sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
         position.y -= speed;
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::S) or sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
@@ -56,7 +57,6 @@ void Player::update()
         position.x += speed;
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::A) or sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
         position.x -= speed;
-    checkCollision();
     body.setPosition(position);
     //std::cout << "x: " << mazeX << " y: " << mazeY << std::endl;
     //std::cout << "x: " << position.x+10 << " y: " << position.y+10 << std::endl;
