@@ -25,7 +25,6 @@ void Player::display (sf::RenderWindow& window)
 
 void Player::checkCollision()
 {
-
     if (body.getGlobalBounds().intersects(maze.getCell(mazeX+1, mazeY).getGlobalBounds()) and maze.getColor(mazeX+1, mazeY) == sf::Color::Black)
     {
         position.x -= speed;
@@ -42,11 +41,6 @@ void Player::checkCollision()
     {
         position.y += speed;
     }
-//    if (TL.x < maze.getCellPosition(mazeX, mazeY).x or TL.y > maze.getCellPosition(mazeX, mazeY).y)
-//        std::cout << "jksdfn";
-
-
-
     return;
 }
 
@@ -54,11 +48,6 @@ void Player::update()
 {
     mazeX = (position.x+body.getRadius())*20/WIDTH;//calculates the cell in the maze its in
     mazeY = (position.y+body.getRadius())*20/HEIGHT;
-//    if (autoSolver == true)
-//    {
-//        recursiveSolve(maze, STARTX, STARTY);
-//        autoSolver = false;
-//    }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::W) or sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
         position.y -= speed;
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::S) or sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
@@ -73,28 +62,3 @@ void Player::update()
     //std::cout << "x: " << position.x+10 << " y: " << position.y+10 << std::endl;
     return;
 }
-
-//bool Player::recursiveSolve(Maze& maze, int autoX, int autoY)
-//{
-//    maze.setColor(autoX, autoY, sf::Color::Blue);
-//    if (autoX == ENDX and autoY == ENDY)
-//        return true;
-//
-//    if (maze.getColor(autoX, autoY-1) == sf::Color::White and recursiveSolve(maze, autoX, autoY-1)) //up
-//    {
-//        return true;
-//    }
-//    if (maze.getColor(autoX, autoY+1) == sf::Color::White and recursiveSolve(maze, autoX, autoY+1)) //down
-//    {
-//        return true;
-//    }
-//    if (maze.getColor(autoX-1, autoY) == sf::Color::White and recursiveSolve(maze, autoX-1, autoY)) //left
-//    {
-//        return true;
-//    }
-//    if (maze.getColor(autoX+1, autoY) == sf::Color::White and recursiveSolve(maze, autoX+1, autoY)) //right
-//    {
-//        return true;
-//    }
-//    maze.setColor(autoX, autoY, sf::Color::White);
-//}
