@@ -2,17 +2,6 @@
 
 Maze::Maze()
 {
-//    for (int x = 0; x < MAZE_HEIGHT; x++)
-//    {
-//        for (int y = 0; y < MAZE_WIDTH; y++)
-//        {
-//            cell[y][x].setSize(sf::Vector2f(WIDTH/MAZE_WIDTH, HEIGHT/MAZE_HEIGHT));
-//            cell[y][x].setPosition(sf::Vector2f(WIDTH/MAZE_WIDTH*y, HEIGHT/MAZE_HEIGHT*x));
-//            cell[y][x].setFillColor(sf::Color::Black);
-//            cell[y][x].setOutlineThickness(3);
-//            cell[y][x].setOutlineColor(sf::Color::White);
-//        }
-//    }
     std::string path = "maze1.txt";
     std::fstream mazeFile;
     if (!std::ifstream (path)) // make the file if it does not exist

@@ -10,17 +10,14 @@ class Player
         Player(sf::Vector2f);
         virtual ~Player();
         void display (sf::RenderWindow&);
-        void checkCollision();
         void update();
         //bool recursiveSolve(Maze&, int, int);
 
     protected:
 
     private:
-        sf::CircleShape body;
+        sf::RectangleShape body;
         sf::Vector2f position;
-        int size;
-        float speed;
         int mazeX;
         int mazeY;
         bool autoSolver;
