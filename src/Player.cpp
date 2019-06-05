@@ -3,10 +3,10 @@
 
 Player::Player(sf::Vector2f startPosition)
 {
-    body.setSize(sf::Vector2f(WIDTH/MAZE_WIDTH, HEIGHT/MAZE_HEIGHT));
-    body.setFillColor(sf::Color::Red);
+    Being::setTexture("../assets/player.png");
     position = startPosition;
     body.setPosition(position);
+    int hp = 100;
     //ctor
 }
 

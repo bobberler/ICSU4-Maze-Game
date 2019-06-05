@@ -3,8 +3,8 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "Maze.h"
-
-class Player
+#include "Being.h"
+class Player : public Being
 {
     public:
         Player(sf::Vector2f);
@@ -16,11 +16,7 @@ class Player
     protected:
 
     private:
-        sf::RectangleShape body;
-        sf::Vector2f position;
-        int mazeX;
-        int mazeY;
-        Maze maze;
+
 };
 
 #endif // PLAYER_H

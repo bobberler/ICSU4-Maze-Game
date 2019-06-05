@@ -15,7 +15,6 @@ Game::~Game()
 
 void Game::run()
 {
-    sf::Clock clock;
     while (window.isOpen())
     {
         sf::Event event;
@@ -27,9 +26,7 @@ void Game::run()
             }
         }
         update();
-        window.clear();
         draw();
-        window.display();
     }
 }
 
@@ -41,7 +38,9 @@ void Game::update()
 
 void Game::draw()
 {
+    window.clear();
     maze->drawMaze(window);
     player->display(window);
+    window.display();
     return;
 }

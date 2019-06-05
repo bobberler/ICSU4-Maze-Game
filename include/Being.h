@@ -1,21 +1,21 @@
 #ifndef BEING_H
 #define BEING_H
 #include <SFML/Graphics.hpp>
-
-class Being
+#include "Point.h"
+class Being : public sf::Sprite
 {
     public:
-        Being();
+        Being(sf::Vector2f position);
         virtual ~Being();
+        virtual void update();
+        virtual void destroy();
 
     protected:
+        Point mazePos;
 
     private:
-        sf::Texture* texture;
         int hp;
-        int mazeX;
-        int mazeY;
-        sf::Vector2f position;
+//        sf::Texture* texture;
 };
 
 #endif // BEING_H
