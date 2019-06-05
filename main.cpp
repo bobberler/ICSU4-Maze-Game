@@ -20,7 +20,7 @@ int main()
                 window.close();
             }
         }
-        player.update(maze);
+        player.update();
         window.clear();
         maze.drawMaze(window);
         player.display(window);
