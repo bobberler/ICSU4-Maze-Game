@@ -13,7 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="D:/Program Files (x86)/CodeBlocks/sfml/include" />
+					<Add directory="C:/Program Files (x86)/CodeBlocks/sfml/include" />
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
@@ -21,7 +21,7 @@
 					<Add library="sfml-audio" />
 					<Add library="sfml-window" />
 					<Add library="sfml-system" />
-					<Add directory="D:/Program Files (x86)/CodeBlocks/sfml/lib" />
+					<Add directory="C:/Program Files (x86)/CodeBlocks/sfml/lib" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -41,9 +41,13 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="include/Being.h" />
+		<Unit filename="include/Game.h" />
 		<Unit filename="include/Maze.h" />
 		<Unit filename="include/Player.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Being.cpp" />
+		<Unit filename="src/Game.cpp" />
 		<Unit filename="src/Maze.cpp" />
 		<Unit filename="src/Player.cpp" />
 		<Extensions>

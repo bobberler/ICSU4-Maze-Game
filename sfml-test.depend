@@ -438,12 +438,11 @@
 1558555099 source:d:\tom c++\sfml-test\src\game.cpp
 	"Game.h"
 
-1559007735 source:e:\c++\mazegame\summative\main.cpp
+1559699309 source:e:\c++\mazegame\summative\main.cpp
 	<SFML/Graphics.hpp>
-	"Maze.h"
-	"Player.h"
+	"Game.h"
 
-1559007735 e:\c++\mazegame\summative\include\maze.h
+1559696644 e:\c++\mazegame\summative\include\maze.h
 	<SFML/Graphics.hpp>
 	<stack>
 	<iostream>
@@ -456,14 +455,15 @@
 	"Game.h"
 	<SFML/Graphics.hpp>
 
-1558813536 e:\c++\mazegame\summative\include\game.h
+1559699499 e:\c++\mazegame\summative\include\game.h
 	<SFML/Graphics.hpp>
 	"Maze.h"
+	"Player.h"
 
-1558813536 source:e:\c++\mazegame\summative\src\game.cpp
+1559701305 source:e:\c++\mazegame\summative\src\game.cpp
 	"Game.h"
 
-1559007735 source:e:\c++\mazegame\summative\src\maze.cpp
+1559696644 source:e:\c++\mazegame\summative\src\maze.cpp
 	"Maze.h"
 
 1525815618 c:\program files (x86)\codeblocks\sfml\include\sfml\graphics.hpp
@@ -875,12 +875,12 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1559007735 e:\c++\mazegame\summative\include\player.h
+1559701970 e:\c++\mazegame\summative\include\player.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Maze.h"
 
-1559007735 source:e:\c++\mazegame\summative\src\player.cpp
+1559701970 source:e:\c++\mazegame\summative\src\player.cpp
 	"Player.h"
 
 1559005534 source:e:\c++\mazegame\summative\src\gamestates.cpp
@@ -929,4 +929,10 @@
 1558978449 a3e91415f9eba6aaeac745a9f39f1c1e225dc
 
 1558978449 ent of 87c3ebb... Merge branch 'master' of https://github.com/bobberler/Summative
+
+1559701839 source:e:\c++\mazegame\summative\src\being.cpp
+	"Being.h"
+
+1559702026 e:\c++\mazegame\summative\include\being.h
+	<SFML/Graphics.hpp>
 

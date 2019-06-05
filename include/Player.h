@@ -20,7 +20,6 @@ class Player
         sf::Vector2f position;
         int mazeX;
         int mazeY;
-        bool autoSolver;
         Maze maze;
 };
 

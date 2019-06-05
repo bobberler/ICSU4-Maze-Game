@@ -7,7 +7,6 @@ Player::Player(sf::Vector2f startPosition)
     body.setFillColor(sf::Color::Red);
     position = startPosition;
     body.setPosition(position);
-    autoSolver = false;
     //ctor
 }
 

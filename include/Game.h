@@ -1,25 +1,23 @@
 #ifndef GAME_H
 #define GAME_H
-
 #include <SFML/Graphics.hpp>
 #include "Maze.h"
-
-#define HEIGHT 800
-#define WIDTH 800
+#include "Player.h"
 
 class Game
 {
     public:
         Game();
         virtual ~Game();
-
-        void input();
+        void run();
         void update();
         void draw();
 
     protected:
 
     private:
+        sf::RenderWindow window;
+        Player* player;
         Maze* maze;
 };
 
