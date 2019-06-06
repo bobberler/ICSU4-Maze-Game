@@ -900,10 +900,11 @@
 	<iostream>
 	<fstream>
 
-1559756275 d:\tom c++\sfml-test\summative\include\player.h
+1559847044 d:\tom c++\sfml-test\summative\include\player.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Maze.h"
+	"Being.h"
 
 1558555099 source:d:\tom c++\sfml-test\summative\src\cell.cpp
 	"Cell.h"
@@ -917,7 +918,7 @@
 	"Maze.h"
 	"Player.h"
 
-1559756275 source:d:\tom c++\sfml-test\summative\src\game.cpp
+1559847044 source:d:\tom c++\sfml-test\summative\src\game.cpp
 	"Game.h"
 
 1559583768 source:d:\tom c++\sfml-test\summative\src\maze.cpp
@@ -939,6 +940,9 @@
 1559756275 source:d:\tom c++\sfml-test\summative\src\being.cpp
 	"Being.h"
 
-1559756275 d:\tom c++\sfml-test\summative\include\being.h
+1559847524 d:\tom c++\sfml-test\summative\include\being.h
 	<SFML/Graphics.hpp>
+	"Point.h"
+
+1559847044 d:\tom c++\sfml-test\summative\include\point.h
 

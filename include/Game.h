@@ -10,6 +10,7 @@ class Game
         Game();
         virtual ~Game();
         void run();
+        void input();
         void update();
         void draw();
 
@@ -17,8 +18,6 @@ class Game
 
     private:
         sf::RenderWindow window;
-        Player* player;
-        Maze* maze;
 };
 
 #endif // GAME_H

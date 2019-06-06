@@ -2,8 +2,6 @@
 
 Being::Being()
 {
-    texture = new sf::Texture()
-    texture.loadFromFile()
     //ctor
 }
 

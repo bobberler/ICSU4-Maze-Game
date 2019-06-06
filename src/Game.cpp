@@ -4,8 +4,7 @@ Game::Game()
 {
     window.create(sf::VideoMode(HEIGHT, WIDTH), "Maze Game", sf::Style::Default);
     window.setFramerateLimit(60);
-    maze = new Maze();
-    player = new Player(maze->getCellPosition(1,1));
+    window.setKeyRepeatEnabled(false);
 }
 
 Game::~Game()
@@ -25,22 +24,28 @@ void Game::run()
                 window.close();
             }
         }
+        input();
         update();
         draw();
     }
 }
 
+void Game::input()
+{
+    return;
+}
+
 void Game::update()
 {
-    player->update();
     return;
 }
 
 void Game::draw()
 {
     window.clear();
-    maze->drawMaze(window);
-    player->display(window);
+
+
+
     window.display();
     return;
 }
