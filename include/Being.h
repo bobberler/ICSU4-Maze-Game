@@ -2,7 +2,8 @@
 #define BEING_H
 #include <SFML/Graphics.hpp>
 #include "Point.h"
-class Being : public GameObject
+#include "GameObject.h"
+class Being //: public GameObject
 {
     public:
         Being();

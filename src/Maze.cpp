@@ -2,70 +2,44 @@
 
 Maze::Maze()
 {
-    std::string path = "maze1.txt";
-    std::fstream mazeFile;
-    if (!std::ifstream (path)) // make the file if it does not exist
+    int tempMaze [20][20] =
     {
-        std::cout << "error loading file";
-        return;
-    }
-    mazeFile.open(path, std::fstream::in); // opens file
-    char in;
-    for (int y = 0; y < MAZE_HEIGHT; y++)
+    { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+    { 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1 },
+    { 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1 },
+    { 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1 },
+    { 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1 },
+    { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1 },
+    { 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1 },
+    { 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1 },
+    { 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1 },
+    { 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1 },
+    { 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1 },
+    { 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1 },
+    { 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1 },
+    { 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1 },
+    { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1 },
+    { 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1 },
+    { 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1 },
+    { 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1 },
+    { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1 },
+    { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }
+    };
+    for(int y = 0; y < 20; y++)
     {
-        for (int x = 0; x < MAZE_WIDTH; x++)
+        for(int x = 0; x < 20; x++)
         {
-            cell[y][x].setSize(sf::Vector2f(WIDTH/MAZE_WIDTH, HEIGHT/MAZE_HEIGHT));
-            cell[y][x].setPosition(sf::Vector2f(WIDTH/MAZE_WIDTH*x, HEIGHT/MAZE_HEIGHT*y));
-            mazeFile >> in;
-            if(in == 'w')//wall
-                cell[y][x].setFillColor(sf::Color::Black);
-            else if(in == 's')//space
-                cell[y][x].setFillColor(sf::Color::White);
+            maze[y][x] = tempMaze[y][x];
+            if(maze[y][x] == 1)
+                Image* wall = new Image(sf::Vector2f(40*x, 40*y), 1, "../assets/wall.png", "wall");
+
         }
     }
-    mazeFile.close();
+
     return;
 }
 
 Maze::~Maze()
 {
     //dtor
-}
-
-void Maze::drawMaze(sf::RenderWindow& window)
-{
-    for (int y = 0; y < MAZE_HEIGHT; y++)
-    {
-        for (int x = 0; x < MAZE_WIDTH; x++)
-        {
-            window.draw(cell[y][x]);
-        }
-    }
-    return;
-}
-
-sf::Vector2f Maze::getCellPosition (int x, int y)
-{
-    return cell[y][x].getPosition();
-}
-
-sf::Vector2f Maze::getSize (int x, int y)
-{
-    return cell[y][x].getSize();
-}
-
-sf::Color Maze::getColor (int x, int y)
-{
-    return cell[y][x].getFillColor();
-}
-
-void Maze::setColor (int x, int y, sf::Color color)
-{
-    cell[y][x].setFillColor(color);
-}
-
-sf::RectangleShape Maze::getCell(int x, int y)
-{
-    return cell[y][x];
 }

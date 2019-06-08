@@ -52,7 +52,7 @@ void LinkedList::add(Link* newLink, Link* destination) //Adds the new Link after
     }
 }
 
-void LinkedList::add(GameObject newContent, Link* destination)
+void LinkedList::add(GameObject* newContent, Link* destination)
 {
 
     Link* l = new Link;
@@ -95,6 +95,24 @@ Link* LinkedList::remove(Link* link)
     link->previous = NULL;
 
     return link;
+}
+
+Link* LinkedList::getLinkAt(int _location)
+{
+	Link* temp = first;
+
+	if (temp == NULL) // empty list
+		return NULL;
+
+	for(int i = 0; i < _location; i++)
+	{
+		if(temp == last) // reached end of list.
+			return NULL;
+
+		temp = temp->next;
+	}
+
+	return temp; // found link
 }
 
 bool LinkedList::isEmpty()

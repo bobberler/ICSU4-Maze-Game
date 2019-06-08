@@ -12,10 +12,12 @@ Date modified: 4/11/2019
 
 #include "GameObject.h"
 
+class GameObject;
+
 class Link
 {
     public:
-    GameObject contents;
+    GameObject* contents;
     Link* next;
     Link* previous;
 };
@@ -31,8 +33,9 @@ class LinkedList
         Link* getLast();
 
         void add(Link* newLink, Link* destination);
-        void add(GameObject newContent, Link* destination);
+        void add(GameObject* newContent, Link* destination);
         Link* remove(Link* link);
+        Link* getLinkAt(int _location);
         bool isEmpty();
 
     protected:

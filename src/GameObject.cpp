@@ -1,13 +1,12 @@
 #include "GameObject.h"
 
-GameObject::GameObject(sf::Vector2f _position, std::string _path, std::string _name, int _layer)
+GameObject::GameObject(sf::Vector2f _position, std::string _name, int _layer)
 {
     //ctor
-    sprite.setPosition(_position);
-    sprite.setTexture(_path)
+    position = _position;
     name = _name;
     layer = _layer;
-    objects->add(this, objects->getLast);
+    objects->add(this, objects->getLast());
 }
 
 GameObject::~GameObject()
@@ -25,9 +24,25 @@ void GameObject::destroy()
     return;
 }
 
+void GameObject::draw(sf::RenderWindow& window)
+{
+    window.draw(sprite);
+}
+
+sf::Sprite GameObject::getSprite()
+{
+    return sprite;
+}
+
 int GameObject::getLayer()
 {
     return layer;
+}
+
+void GameObject::updatePosition()
+{
+    sprite.setPosition(position);
+	return;
 }
 
 std::string GameObject::getName()

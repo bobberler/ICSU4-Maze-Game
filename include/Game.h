@@ -1,9 +1,11 @@
 #ifndef GAME_H
 #define GAME_H
 #include <SFML/Graphics.hpp>
+#include "GameObject.h"
 #include "Maze.h"
-#include "Player.h"
-
+#define HEIGHT 800
+#define WIDTH 800
+#define LAYERS 4
 class Game
 {
     public:
