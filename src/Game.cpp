@@ -51,20 +51,20 @@ void Game::update()
 
 void Game::draw()
 {
-    window.clear(sf::Color::White);
+    window.clear(sf::Color(210, 186, 252, 255));
 
-    for(int layer = 0; layer < LAYERS; layer++)
-    {
+    //for(int layer = 0; layer < LAYERS; layer++)
+    //{
         for(int i = 0; i < GameObject::objects->getSize(); i++)
         {
-            if(GameObject::objects->getLinkAt(i)->contents->getLayer() == i)
-            {
+            //if(GameObject::objects->getLinkAt(i)->contents->getLayer() == i)
+            //{
                 GameObject::objects->getLinkAt(i)->contents->updatePosition();
                 //window.draw(GameObject::objects->getLinkAt(i)->contents->getSprite());
                 GameObject::objects->getLinkAt(i)->contents->draw(window);
-            }
+            //}
         }
-    }
+    //}
 
     window.display();
     return;
