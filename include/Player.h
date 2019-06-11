@@ -4,7 +4,7 @@
 #include <iostream>
 #include "Maze.h"
 #include "Being.h"
-class Player : public Being
+class Player //: public Being
 {
     public:
         Player(sf::Vector2f);

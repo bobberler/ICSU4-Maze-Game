@@ -3,7 +3,6 @@
 
 #include <SFML/Graphics.hpp>
 #include "LinkedList.h"
-
 class LinkedList;
 
 class GameObject
@@ -26,6 +25,8 @@ class GameObject
         int layer;
         sf::Sprite sprite;
         sf::Texture texture;
+//        sf::Text text;
+//        sf::Font font;
     private:
         std::string name;
         sf::Vector2f position;

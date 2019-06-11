@@ -955,14 +955,14 @@
 	"GameObject.h"
 	"Maze.h"
 
-1560016655 e:\c++\maze game\summative\include\gameobject.h
+1560214313 e:\c++\maze game\summative\include\gameobject.h
 	<SFML/Graphics.hpp>
 	"LinkedList.h"
 
-1560008072 source:e:\c++\maze game\summative\src\being.cpp
+1560215555 source:e:\c++\maze game\summative\src\being.cpp
 	"Being.h"
 
-1560015029 e:\c++\maze game\summative\include\being.h
+1560215555 e:\c++\maze game\summative\include\being.h
 	<SFML/Graphics.hpp>
 	"Point.h"
 	"GameObject.h"
@@ -972,16 +972,17 @@
 1560015605 source:e:\c++\maze game\summative\src\player.cpp
 	"Player.h"
 
-1560008072 e:\c++\maze game\summative\include\player.h
+1560214275 e:\c++\maze game\summative\include\player.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Maze.h"
 	"Being.h"
 
-1560015918 e:\c++\maze game\summative\include\maze.h
+1560214313 e:\c++\maze game\summative\include\maze.h
 	<SFML/Graphics.hpp>
 	"Image.h"
 	"GameObject.h"
+	"Point.h"
 
 1560008072 source:e:\c++\maze game\summative\src\point.cpp
 	"Point.h"
@@ -989,13 +990,13 @@
 1560014929 e:\c++\maze game\summative\include\linkedlist.h
 	"GameObject.h"
 
-1560016491 source:e:\c++\maze game\summative\src\game.cpp
+1560213708 source:e:\c++\maze game\summative\src\game.cpp
 	"Game.h"
 
-1560014001 e:\c++\maze game\summative\include\image.h
+1560215555 e:\c++\maze game\summative\include\image.h
 	"GameObject.h"
 
-1560016567 source:e:\c++\maze game\summative\src\maze.cpp
+1560215568 source:e:\c++\maze game\summative\src\maze.cpp
 	"Maze.h"
 
 1560016075 source:e:\c++\maze game\summative\src\gameobject.cpp
@@ -1004,7 +1005,7 @@
 1560014670 source:e:\c++\maze game\summative\src\linkedlist.cpp
 	"LinkedList.h"
 
-1560016655 source:e:\c++\maze game\summative\src\image.cpp
+1560215555 source:e:\c++\maze game\summative\src\image.cpp
 	"Image.h"
 
 1560192950 d:\tom c++\sfml-test\summative\include\gameobject.h

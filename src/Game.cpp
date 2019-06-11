@@ -60,8 +60,8 @@ void Game::draw()
             //if(GameObject::objects->getLinkAt(i)->contents->getLayer() == i)
             //{
                 GameObject::objects->getLinkAt(i)->contents->updatePosition();
-                //window.draw(GameObject::objects->getLinkAt(i)->contents->getSprite());
-                GameObject::objects->getLinkAt(i)->contents->draw(window);
+                window.draw(GameObject::objects->getLinkAt(i)->contents->getSprite());
+                //GameObject::objects->getLinkAt(i)->contents->draw(window);
             //}
         }
     //}

@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include "Image.h"
 #include "GameObject.h"
+#include "Point.h"
 
 class Maze
 {
