@@ -3,6 +3,8 @@
 #include <SFML/Graphics.hpp>
 #include "GameObject.h"
 #include "Maze.h"
+#include "Player.h"
+#include "Monster.h"
 #define HEIGHT 800
 #define WIDTH 800
 #define LAYERS 4

@@ -1,23 +1,17 @@
 #include "Player.h"
 
 
-Player::Player(sf::Vector2f startPosition)
+Player::Player(sf::Vector2f _position, int _layer, std::string _label, int _hp, int _strength) : Being(_position, _layer, _label, _hp, _strength)
 {
-    //sprite.setTexture(sf::Texture.loadFromFile("../assets/player.png"));
-    //position = startPosition;
-    //body.setPosition(position);
-    int hp = 100;
+    texture.loadFromFile("assets/player.png");
+    sprite.setTexture(texture);
+
     //ctor
 }
 
 Player::~Player()
 {
     //dtor
-}
-
-void Player::display (sf::RenderWindow& window)
-{
-    //window.draw(body);
 }
 
 

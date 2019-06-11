@@ -4,12 +4,11 @@
 #include <iostream>
 #include "Maze.h"
 #include "Being.h"
-class Player //: public Being
+class Player : public Being
 {
     public:
-        Player(sf::Vector2f);
+        Player(sf::Vector2f _position, int _layer, std::string _label, int _hp, int _strength);
         virtual ~Player();
-        void display (sf::RenderWindow&);
         void update();
         //bool recursiveSolve(Maze&, int, int);
 

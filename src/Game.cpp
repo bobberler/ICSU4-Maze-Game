@@ -18,6 +18,8 @@ Game::~Game()
 void Game::run()
 {
     Maze maze;
+    Player* player = new Player(sf::Vector2f(1*40, 1*40), 1, "player", 10, 10);
+    Monster* monster = new Monster(sf::Vector2f (8*40, 10*40), 1, "monster", 10, 10);
     while (window.isOpen())
     {
         sf::Event event;
