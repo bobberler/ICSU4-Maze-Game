@@ -3,11 +3,13 @@
 #include <SFML/Graphics.hpp>
 #include "Point.h"
 #include "GameObject.h"
+
 class Being : public GameObject
 {
     public:
         Being(sf::Vector2f _position, int _layer, std::string _name, int _hp, int _strength);
         virtual ~Being();
+        void update();
 
     protected:
         Point mazePos;

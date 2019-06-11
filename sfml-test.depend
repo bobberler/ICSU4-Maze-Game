@@ -953,39 +953,43 @@
 	<SFML/Graphics.hpp>
 	"Game.h"
 
-1560016409 e:\c++\maze game\summative\include\game.h
+1560300070 e:\c++\maze game\summative\include\game.h
 	<SFML/Graphics.hpp>
 	"GameObject.h"
 	"Maze.h"
+	"Player.h"
+	"Monster.h"
+	"Image.h"
 
-1560214313 e:\c++\maze game\summative\include\gameobject.h
+1560297319 e:\c++\maze game\summative\include\gameobject.h
 	<SFML/Graphics.hpp>
 	"LinkedList.h"
 
-1560215555 source:e:\c++\maze game\summative\src\being.cpp
+1560295907 source:e:\c++\maze game\summative\src\being.cpp
 	"Being.h"
 
-1560215555 e:\c++\maze game\summative\include\being.h
+1560296592 e:\c++\maze game\summative\include\being.h
 	<SFML/Graphics.hpp>
 	"Point.h"
 	"GameObject.h"
 
 1560008072 e:\c++\maze game\summative\include\point.h
 
-1560015605 source:e:\c++\maze game\summative\src\player.cpp
+1560297109 source:e:\c++\maze game\summative\src\player.cpp
 	"Player.h"
+	"Game.h"
 
-1560214275 e:\c++\maze game\summative\include\player.h
+1560300263 e:\c++\maze game\summative\include\player.h
 	<SFML/Graphics.hpp>
 	<iostream>
-	"Maze.h"
 	"Being.h"
-
-1560214313 e:\c++\maze game\summative\include\maze.h
-	<SFML/Graphics.hpp>
 	"Image.h"
+
+1560297291 e:\c++\maze game\summative\include\maze.h
+	<SFML/Graphics.hpp>
 	"GameObject.h"
 	"Point.h"
+	"Game.h"
 
 1560008072 source:e:\c++\maze game\summative\src\point.cpp
 	"Point.h"
@@ -993,16 +997,16 @@
 1560014929 e:\c++\maze game\summative\include\linkedlist.h
 	"GameObject.h"
 
-1560213708 source:e:\c++\maze game\summative\src\game.cpp
+1560296684 source:e:\c++\maze game\summative\src\game.cpp
 	"Game.h"
 
 1560215555 e:\c++\maze game\summative\include\image.h
 	"GameObject.h"
 
-1560215568 source:e:\c++\maze game\summative\src\maze.cpp
+1560297109 source:e:\c++\maze game\summative\src\maze.cpp
 	"Maze.h"
 
-1560016075 source:e:\c++\maze game\summative\src\gameobject.cpp
+1560297291 source:e:\c++\maze game\summative\src\gameobject.cpp
 	"GameObject.h"
 
 1560014670 source:e:\c++\maze game\summative\src\linkedlist.cpp
@@ -1038,5 +1042,12 @@
 	"Being.h"
 
 1560277897 source:d:\tom c++\sfml-test\summative\src\monster.cpp
+	"Monster.h"
+
+1560292864 e:\c++\maze game\summative\include\monster.h
+	<SFML/Graphics.hpp>
+	"Being.h"
+
+1560292864 source:e:\c++\maze game\summative\src\monster.cpp
 	"Monster.h"
 

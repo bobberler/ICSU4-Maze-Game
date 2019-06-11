@@ -49,3 +49,8 @@ std::string GameObject::getName()
 {
     return name;
 }
+
+void GameObject::setPosition(sf::Vector2f _position)
+{
+    position = _position;
+}

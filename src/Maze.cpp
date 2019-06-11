@@ -1,5 +1,7 @@
 #include "Maze.h"
 
+int Maze::maze[20][20];
+
 Maze::Maze()
 {
     int tempMaze [20][20] =
@@ -30,15 +32,6 @@ Maze::Maze()
         for(int x = 0; x < 20; x++)
         {
             maze[y][x] = tempMaze[y][x];
-            if(maze[y][x] == 1)
-                Image* wall = new Image(sf::Vector2f(40*x, 40*y), 1, "assets/wall.png", "wall");
-            if(maze[y][x] == 2)
-                Image* end = new Image (sf::Vector2f(40*x, 40*y), 1, "assets/star.png", "end");
-            if(maze[y][x] == 4)
-                Image* key = new Image (sf::Vector2f(40*x, 40*y), 1, "assets/key.png", "key");
-            if(maze[y][x] == 3)
-                Image* door = new Image (sf::Vector2f(40*x, 40*y), 1, "assets/door.png", "door");
-
         }
     }
 

@@ -2,9 +2,11 @@
 #define MAZE_H
 
 #include <SFML/Graphics.hpp>
-#include "Image.h"
 #include "GameObject.h"
 #include "Point.h"
+#include "Game.h"
+
+class Game;
 
 class Maze
 {
@@ -12,13 +14,13 @@ class Maze
         Maze();
         virtual ~Maze();
 
-        //static int maze[20][20];
+        static int maze[20][20];
 
     protected:
 
     private:
         bool autoSolver;
-        int maze[20][20];
+        //int maze[20][20];
 
 };
 

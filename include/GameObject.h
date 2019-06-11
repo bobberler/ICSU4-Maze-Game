@@ -18,6 +18,7 @@ class GameObject
         int getLayer();
         std::string getName();
         sf::Sprite getSprite();
+        void setPosition(sf::Vector2f _position);
 
         static LinkedList* objects;
 
@@ -25,11 +26,11 @@ class GameObject
         int layer;
         sf::Sprite sprite;
         sf::Texture texture;
+        sf::Vector2f position;
 //        sf::Text text;
 //        sf::Font font;
     private:
         std::string name;
-        sf::Vector2f position;
 };
 
 #endif // GAMEOBJECT_H

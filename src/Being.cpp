@@ -13,3 +13,11 @@ Being::~Being()
 {
     //dtor
 }
+
+void Being::update()
+{
+    position.x = mazePos.x*40;
+    position.y = mazePos.y*40;
+    updatePosition();
+    return;
+}
