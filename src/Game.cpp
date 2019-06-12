@@ -31,7 +31,6 @@ void Game::run()
                 key = new Image (sf::Vector2f(40*x, 40*y), 1, "assets/key.png", "key");
             if(Maze::maze[y][x] == 3)
                 door = new Image (sf::Vector2f(40*x, 40*y), 1, "assets/door.png", "door");
-
         }
     }
     monster = new Monster(sf::Vector2f (8*40, 10*40), 1, "monster", 10, 10);

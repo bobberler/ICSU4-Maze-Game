@@ -28,7 +28,6 @@ class Game
         Monster* monster;
         Image* key;
         Image* door;
-        Image* hearts[10];
 };
 
 #endif // GAME_H

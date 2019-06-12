@@ -894,17 +894,17 @@
 	<SFML/Graphics.hpp>
 	"Game.h"
 
-1560274106 d:\tom c++\sfml-test\summative\include\maze.h
+1560365471 d:\tom c++\sfml-test\summative\include\maze.h
 	<SFML/Graphics.hpp>
-	"Image.h"
 	"GameObject.h"
 	"Point.h"
+	"Game.h"
 
-1560277558 d:\tom c++\sfml-test\summative\include\player.h
+1560365471 d:\tom c++\sfml-test\summative\include\player.h
 	<SFML/Graphics.hpp>
 	<iostream>
-	"Maze.h"
 	"Being.h"
+	"Image.h"
 
 1558555099 source:d:\tom c++\sfml-test\summative\src\cell.cpp
 	"Cell.h"
@@ -913,21 +913,23 @@
 	"Game.h"
 	<SFML/Graphics.hpp>
 
-1560277937 d:\tom c++\sfml-test\summative\include\game.h
+1560365502 d:\tom c++\sfml-test\summative\include\game.h
 	<SFML/Graphics.hpp>
 	"GameObject.h"
 	"Maze.h"
 	"Player.h"
 	"Monster.h"
+	"Image.h"
 
-1560277897 source:d:\tom c++\sfml-test\summative\src\game.cpp
+1560365471 source:d:\tom c++\sfml-test\summative\src\game.cpp
 	"Game.h"
 
-1560277897 source:d:\tom c++\sfml-test\summative\src\maze.cpp
+1560365471 source:d:\tom c++\sfml-test\summative\src\maze.cpp
 	"Maze.h"
 
-1560277624 source:d:\tom c++\sfml-test\summative\src\player.cpp
+1560365471 source:d:\tom c++\sfml-test\summative\src\player.cpp
 	"Player.h"
+	"Game.h"
 
 1558978449 a3e91415f9eba6aaeac745a9f39f1c1e225dc
 
@@ -939,10 +941,10 @@
 1559702026 e:\c++\mazegame\summative\include\being.h
 	<SFML/Graphics.hpp>
 
-1560274106 source:d:\tom c++\sfml-test\summative\src\being.cpp
+1560365471 source:d:\tom c++\sfml-test\summative\src\being.cpp
 	"Being.h"
 
-1560274106 d:\tom c++\sfml-test\summative\include\being.h
+1560365471 d:\tom c++\sfml-test\summative\include\being.h
 	<SFML/Graphics.hpp>
 	"Point.h"
 	"GameObject.h"
@@ -1015,7 +1017,7 @@
 1560215555 source:e:\c++\maze game\summative\src\image.cpp
 	"Image.h"
 
-1560274106 d:\tom c++\sfml-test\summative\include\gameobject.h
+1560365471 d:\tom c++\sfml-test\summative\include\gameobject.h
 	<SFML/Graphics.hpp>
 	"LinkedList.h"
 
@@ -1025,7 +1027,7 @@
 1560192950 d:\tom c++\sfml-test\summative\include\image.h
 	"GameObject.h"
 
-1560192950 source:d:\tom c++\sfml-test\summative\src\gameobject.cpp
+1560365471 source:d:\tom c++\sfml-test\summative\src\gameobject.cpp
 	"GameObject.h"
 
 1560192950 source:d:\tom c++\sfml-test\summative\src\image.cpp
