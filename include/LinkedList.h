@@ -22,7 +22,7 @@ class Link
     Link* previous;
 };
 
-class LinkedList
+class LinkedList //LinkedList made with gameObjects
 {
     public:
         LinkedList();
@@ -34,8 +34,10 @@ class LinkedList
 
         void add(Link* newLink, Link* destination);
         void add(GameObject* newContent, Link* destination);
-        Link* remove(Link* link);
+        void remove(Link* link);
         Link* getLinkAt(int _location);
+        Link* getLink(GameObject*);
+        Link* getLinkWithName(std::string);
         bool isEmpty();
 
     protected:

@@ -8,27 +8,23 @@ class LinkedList;
 class GameObject
 {
     public:
-        GameObject(sf::Vector2f _position, std::string _name, int _layer);
+        GameObject(sf::Vector2f _position, std::string _name);
         virtual ~GameObject();
         virtual void update();
         virtual void destroy();
-        void draw(sf::RenderWindow& window);
         void updatePosition();
 
-        int getLayer();
         std::string getName();
         sf::Sprite getSprite();
         void setPosition(sf::Vector2f _position);
 
-        static LinkedList* objects;
+        static LinkedList* objects; //static linked list of all game objects
 
     protected:
-        int layer;
-        sf::Sprite sprite;
+
+        sf::Sprite sprite; //sfml sprite and texture sutff
         sf::Texture texture;
         sf::Vector2f position;
-//        sf::Text text;
-//        sf::Font font;
     private:
         std::string name;
 };

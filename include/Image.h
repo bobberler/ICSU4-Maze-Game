@@ -6,7 +6,7 @@
 class Image : public GameObject
 {
     public:
-        Image(sf::Vector2f, int, std::string, std::string);
+        Image(sf::Vector2f, std::string, std::string);
         virtual ~Image();
 
     protected:

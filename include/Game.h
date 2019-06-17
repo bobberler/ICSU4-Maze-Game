@@ -6,9 +6,12 @@
 #include "Player.h"
 #include "Monster.h"
 #include "Image.h"
+#include "Hint.h"
 #define HEIGHT 800
 #define WIDTH 800
-#define LAYERS 4
+
+class Monster;
+
 class Game
 {
     public:
@@ -19,15 +22,18 @@ class Game
         void update();
         void draw();
         static char direction;
+        static sf::Vector2i mousePos;
+
+        static Monster* getMonsterWithLocation(Point);
 
     protected:
 
     private:
         sf::RenderWindow window;
-        Player* player;
-        Monster* monster;
-        Image* key;
-        Image* door;
+        static Monster* monster1;
+        static Monster* monster2;
+        static Monster* monster3;
+        static Monster* monster4;
 };
 
 #endif // GAME_H

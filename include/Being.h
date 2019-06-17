@@ -7,16 +7,17 @@
 class Being : public GameObject
 {
     public:
-        Being(sf::Vector2f _position, int _layer, std::string _name, int _hp, int _strength);
+        Being(sf::Vector2f _position, std::string _name, int _hp, int _strength);
         virtual ~Being();
         void update();
+        Point getMazePos();
 
     protected:
         Point mazePos;
-
-    private:
         int hp;
         int strength;
+
+    private:
 };
 
 #endif // BEING_H

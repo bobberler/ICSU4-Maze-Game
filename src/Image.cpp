@@ -1,9 +1,9 @@
 #include "Image.h"
 
-Image::Image(sf::Vector2f _position, int _layer, std::string _path, std::string _label) : GameObject(_position, _label, _layer)
+Image::Image(sf::Vector2f _position, std::string _path, std::string _name) : GameObject(_position, _name)
 {
-    texture.loadFromFile(_path);
-    sprite.setTexture(texture);
+    texture.loadFromFile(_path); //load texture
+    sprite.setTexture(texture); //set object to said texture
 }
 
 Image::~Image()

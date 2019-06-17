@@ -1,12 +1,11 @@
 #include "GameObject.h"
 
-GameObject::GameObject(sf::Vector2f _position, std::string _name, int _layer)
+GameObject::GameObject(sf::Vector2f _position, std::string _name)
 {
     //ctor
     position = _position;
     name = _name;
-    layer = _layer;
-    objects->add(this, objects->getLast());
+    objects->add(this, objects->getLast());//add this objects that got created to the linked list
 }
 
 GameObject::~GameObject()
@@ -24,19 +23,9 @@ void GameObject::destroy()
     return;
 }
 
-void GameObject::draw(sf::RenderWindow& window)
-{
-    window.draw(sprite);
-}
-
 sf::Sprite GameObject::getSprite()
 {
     return sprite;
-}
-
-int GameObject::getLayer()
-{
-    return layer;
 }
 
 void GameObject::updatePosition()

@@ -61,40 +61,78 @@ void LinkedList::add(GameObject* newContent, Link* destination)
     add(l, destination);
 }
 
-Link* LinkedList::remove(Link* link)
+//Link* LinkedList::remove(Link* link)
+//{
+//    if(first == NULL) //Chain is empty
+//        return link;
+//    if (link == NULL)
+//        return link;
+//
+//    size--;
+//
+//    if(first == link && last == link) //If the link the the only one in the chain
+//    {
+//        first = NULL;
+//        last = NULL;
+//    }
+//    else if(first == link) //link is the first in the chain
+//    {
+//        link->next->previous = NULL;
+//        first = link->next;
+//    }
+//    else if(last == link) //link is the last in the chain
+//    {
+//        link->previous->next = NULL;
+//        last = link->previous;
+//    }
+//    else
+//    {
+//        link->previous->next = link->next;
+//        link->next->previous = link->previous;
+//    }
+//
+//    link->next = NULL;
+//    link->previous = NULL;
+//
+//    return link;
+//}
+
+void LinkedList::remove(Link* link)
 {
-    if(first == NULL) //Chain is empty
-        return link;
-    if (link == NULL)
-        return link;
+	if (first != NULL and link != NULL) //list cannot be empty and link cannot be empty
+	{
+		size--;
 
-    size--;
+		if (first == link and last == link) //only one item in list
+		{
+			first = NULL;
+			last = NULL;
+		}
 
-    if(first == link && last == link) //If the link the the only one in the chain
-    {
-        first = NULL;
-        last = NULL;
-    }
-    else if(first == link) //link is the first in the chain
-    {
-        link->next->previous = NULL;
-        first = link->next;
-    }
-    else if(last == link) //link is the last in the chain
-    {
-        link->previous->next = NULL;
-        last = link->previous;
-    }
-    else
-    {
-        link->previous->next = link->next;
-        link->next->previous = link->previous;
-    }
+		else if (first == link)//deleting first
+		{
+			link->next->previous = NULL;
+			first = link->next;
+		}
 
-    link->next = NULL;
-    link->previous = NULL;
+		else if (last == link) //deleting last
+		{
+			link->previous->next = NULL;
+            last = link->previous;
+		}
 
-    return link;
+		else
+		{
+			link->previous->next = link->next;
+            link->next->previous = link->previous;
+		}
+
+		link->contents->destroy();
+
+		delete(link);
+	}
+
+	return;
 }
 
 Link* LinkedList::getLinkAt(int _location)
@@ -113,6 +151,43 @@ Link* LinkedList::getLinkAt(int _location)
 	}
 
 	return temp; // found link
+}
+
+Link* LinkedList::getLink(GameObject* _contents)
+{
+	Link* temp = first;
+
+	if (temp == NULL) // Empty list
+		return NULL;
+
+	// Content numbers are NOT always sequential, so can't assume must be less than size.
+	while (temp->contents != _contents)
+	{
+		if (temp == last) // Reached end of list.
+			return NULL;
+
+		temp = temp->next;
+	}
+
+	return temp; // Found link
+}
+
+Link* LinkedList::getLinkWithName(std::string _name)
+{
+	Link* temp = first;
+
+	if (temp == NULL) // Empty list
+		return NULL;
+
+	while (temp->contents->getName() != _name)
+	{
+		if (temp == last) // Reached end of list.
+			return NULL;
+
+		temp = temp->next;
+	}
+
+	return temp; // Found link
 }
 
 bool LinkedList::isEmpty()

@@ -19,8 +19,6 @@ class Maze
     protected:
 
     private:
-        bool autoSolver;
-        //int maze[20][20];
 
 };
 
