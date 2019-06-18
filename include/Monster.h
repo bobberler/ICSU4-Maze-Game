@@ -17,6 +17,7 @@ class Monster : public Being
     protected:
 
     private:
+        bool dead;
 };
 
 #endif // MONSTER_H
